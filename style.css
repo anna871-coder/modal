@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;}
+
+    .openBtn {
+        padding: 10px;
+        margin: 10px;
+        font-size: 16px;
+        background-color: whitesmoke;
+        z-index: 0;
+    }
+.closedBody {
+    background-color: indianred;
+}
+.openBody {
+    background-color: rgba(205, 92, 92, 0.5);
+  
+}
+#closeBtn {
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    padding: 5px;
+    text-align: center;
+}
+.modal {
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+.btn {
+    position: relative;
+    float: right;
+    margin: 3px;
+    padding: 10px;
+}
+.btn:nth-of-type(3) {
+    background-color: greenyellow;
+}
+.btn:nth-of-type(2) {
+    background-color: red;
+}
+
+#myModal {
+    position: absolute;
+    top: 50%;
+    width: calc(100% - 20px);
+    text-align: justify;
+    border: 1px solid gray;
+    padding: 20px;
+    margin: 10px;
+    box-shadow: 0 0 10px;
+    border-radius: 10px;
+    background-color: rgba(109, 243, 187, 0.753);
+}
+.openModal {
+    animation: fadein 3s;
+}
+@keyframes fadein {
+    from {
+        opacity: 0; }
+
+    to   {
+        opacity: 1; }
+}
+@media (min-width: 560px) {#myModal {width: 50% !important;
+    left: 50%;
+    transform: translate(-50%, -50%);}
+}
+.invisible {
+    display: none;
+}
+.closeModal {
+    animation: fadeinout 3s linear forwards;
+}
+@keyframes fadeinout {
+    from {
+        opacity: 1; }
+
+    to   {
+        opacity: 0; }
+}
